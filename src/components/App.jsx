@@ -16,11 +16,11 @@ export class App extends Component {
     filter: '',
   };
 
-  addContact = data => {
+  addContact = ({name, number}) => {
     const contact = {
       id: nanoid(),
-      name: data.name,
-      number: data.number,
+      name: name,
+      number: number,
     };
     this.getSameName(contact.name)
       ? alert(`${contact.name} is already in contacts.`)
