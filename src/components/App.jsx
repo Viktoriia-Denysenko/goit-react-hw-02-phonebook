@@ -30,7 +30,7 @@ export class App extends Component {
 
   getSameName = name => {
     const { contacts } = this.state;
-    return contacts.find(contact => contact.name === name);
+    return contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase());
   };
 
   deleteContact = contactId => {
